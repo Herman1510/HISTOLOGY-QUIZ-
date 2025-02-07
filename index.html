@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HISTOLOGY QUIZ (SAMPLE)</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h1>HISTOLOGY QUIZ (SAMPLE)</h1>
+
+    <!-- Student Quiz Form -->
+    <form id="quizForm">
+        <label for="studentName"><strong>Your Name:</strong></label>
+        <input type="text" id="studentName" required>
+
+        <h3>Question 1: A microscope with an average Numerical Aperture of 1.25 has an approximate total magnification of:</h3>
+        <input type="radio" name="q1" value="a"> a) 100<br>
+        <input type="radio" name="q1" value="b"> b) 10<br>
+        <input type="radio" name="q1" value="c"> c) 1500<br>
+        <input type="radio" name="q1" value="d"> d) 1000<br>
+        <input type="radio" name="q1" value="e"> e) 500<br>
+
+        <h3>Question 2: Who proposed the cell theory?</h3>
+        <input type="radio" name="q2" value="a"> a) Theodor Schwann, James Watson and Robert Hooke<br>
+        <input type="radio" name="q2" value="b"> b) Theodor Schwann, Matthias Schleiden and Robert Hooke<br>
+        <input type="radio" name="q2" value="c"> c) Theodor Schwann, Matthias Schleiden and Rudolf Virchow<br>
+        <input type="radio" name="q2" value="d"> d) James Watson, Rudolf Virchow, Theodor Schwann<br>
+        <input type="radio" name="q2" value="e"> e) Theodor Schwann, Rudolf Virchow and Robert Hooke<br>
+
+        <h3>Question 3: A myocyte is;</h3>
+        <input type="radio" name="q3" value="a"> a) Myofibre<br>
+        <input type="radio" name="q3" value="b"> b) Epithelial cell<br>
+        <input type="radio" name="q3" value="c"> c) Connective tissue cell<br>
+        <input type="radio" name="q3" value="d"> d) Nerve cell<br>
+        <input type="radio" name="q3" value="e"> e) A blood cell<br>
+
+        <h3>Question 4: The clinical use of stem cells has shown promise in treating various medical conditions. Which of the following is NOT a condition that has been successfully treated using stem cells?</h3>
+        <input type="radio" name="q4" value="a"> a) Spinal cord injuries<br>
+        <input type="radio" name="q4" value="b"> b) Heart diseases<br>
+        <input type="radio" name="q4" value="c"> c) Leukemia<br>
+        <input type="radio" name="q4" value="d"> d) Diabetes mellitus<br>
+        <input type="radio" name="q4" value="e"> e) Aging<br>
+
+        <h3>Question 5: In individuals with chronic vitamin A deficiency, epithelial tissues of the type found in the bronchi and urinary bladder may gradually be replaced by:</h3>
+        <input type="radio" name="q5" value="a"> a) Simple squamous epithelium<br>
+        <input type="radio" name="q5" value="b"> b) Stratified columnar epithelium<br>
+        <input type="radio" name="q5" value="c"> c) Stratified squamous epithelium<br>
+        <input type="radio" name="q5" value="d"> d) Stratified cuboidal epithelium<br>
+        <input type="radio" name="q5" value="e"> e) Simple cuboidal epithelium<br>
+
+        <h3>Question 6: Microglia of the central nervous system originates from;</h3>
+        <input type="radio" name="q6" value="a"> a) Erythrocytes<br>
+        <input type="radio" name="q6" value="b"> b) Blood monocytes<br>
+        <input type="radio" name="q6" value="c"> c) Blood granulocytes<br>
+        <input type="radio" name="q6" value="d"> d) Blood lymphocytes<br>
+        <input type="radio" name="q6" value="e"> e) Thrombocytes<br>
+
+        <h3>Question 7: Multilocular fat cells are characterized by:</h3>
+        <input type="radio" name="q7" value="a"> a) They are heat insulator<br>
+        <input type="radio" name="q7" value="b"> b) Affected by starvation<br>
+        <input type="radio" name="q7" value="c"> c) Present in adults<br>
+        <input type="radio" name="q7" value="d"> d) They have signet ring appearance<br>
+        <input type="radio" name="q7" value="e"> e) Abundant mitochondria<br>
+
+        <h3>Question 8: The stage of prophase I wherein crossing over occurs is:</h3>
+        <input type="radio" name="q8" value="a"> a) Leptotene<br>
+        <input type="radio" name="q8" value="b"> b) Zygotene<br>
+        <input type="radio" name="q8" value="c"> c) Diplotene<br>
+        <input type="radio" name="q8" value="d"> d) Anaphase<br>
+        <input type="radio" name="q8" value="e"> e) Pachytene<br>
+
+        <h3>Question 9: The main function of simple columnar epithelium is:</h3>
+        <input type="radio" name="q9" value="a"> a) Covering<br>
+        <input type="radio" name="q9" value="b"> b) Absorption<br>
+        <input type="radio" name="q9" value="c"> c) Exchange<br>
+        <input type="radio" name="q9" value="d"> d) Protection<br>
+        <input type="radio" name="q9" value="e"> e) Secretion<br>
+
+        <h3>Question 10: Which gland uses holocrine type of secretion?</h3>
+        <input type="radio" name="q10" value="a"> a) All mucous glands<br>
+        <input type="radio" name="q10" value="b"> b) Skin sweat gland<br>
+        <input type="radio" name="q10" value="c"> c) Parotid salivary gland<br>
+        <input type="radio" name="q10" value="d"> d) Sublingual salivary gland<br>
+        <input type="radio" name="q10" value="e"> e) Skin sebaceous gland<br>
+
+        <br>
+        <button type="submit">Submit Quiz</button>
+    </form>
+
+    <!-- Student Submission Result -->
+    <h2>Your Submission</h2>
+    <div id="result"></div>
+
+    <!-- Teacher's View -->
+    <h2>Teacher's View: Quiz Submissions</h2>
+    <div id="teacherResults"></div>
+
+    <small>Presented to you by a man from the future</small>
+
+</body>
+</html>
