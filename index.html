@@ -3,15 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HISTOLOGY QUIZ (SAMPLE)</title>
+    <title>Quiz Submission</title>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
     <script defer src="script.js"></script>
+    <style>
+        #quizResultsTable {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        #quizResultsTable th, #quizResultsTable td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        .footer-text {
+            font-size: 12px;
+            color: gray;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>HISTOLOGY QUIZ (SAMPLE)</h1>
+    <h1>Online Quiz</h1>
 
-    <!-- Student Quiz Form -->
     <form id="quizForm">
         <label for="studentName"><strong>Your Name:</strong></label>
         <input type="text" id="studentName" required>
@@ -30,7 +46,7 @@
         <input type="radio" name="q2" value="d"> d) James Watson, Rudolf Virchow, Theodor Schwann<br>
         <input type="radio" name="q2" value="e"> e) Theodor Schwann, Rudolf Virchow and Robert Hooke<br>
 
-        <h3>Question 3: A myocyte is;</h3>
+        <h3>Question 3: A myocyte is:</h3>
         <input type="radio" name="q3" value="a"> a) Myofibre<br>
         <input type="radio" name="q3" value="b"> b) Epithelial cell<br>
         <input type="radio" name="q3" value="c"> c) Connective tissue cell<br>
@@ -51,7 +67,7 @@
         <input type="radio" name="q5" value="d"> d) Stratified cuboidal epithelium<br>
         <input type="radio" name="q5" value="e"> e) Simple cuboidal epithelium<br>
 
-        <h3>Question 6: Microglia of the central nervous system originates from;</h3>
+        <h3>Question 6: Microglia of the central nervous system originates from:</h3>
         <input type="radio" name="q6" value="a"> a) Erythrocytes<br>
         <input type="radio" name="q6" value="b"> b) Blood monocytes<br>
         <input type="radio" name="q6" value="c"> c) Blood granulocytes<br>
@@ -90,15 +106,10 @@
         <button type="submit">Submit Quiz</button>
     </form>
 
-    <!-- Student Submission Result -->
     <h2>Your Submission</h2>
     <div id="result"></div>
 
-    <!-- Teacher's View -->
-    <h2>Teacher's View: Quiz Submissions</h2>
-    <div id="teacherResults"></div>
-
-    <small>Presented to you by a man from the future</small>
+    <div class="footer-text">Presented to you by a man from the future</div>
 
 </body>
 </html>
